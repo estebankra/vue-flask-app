@@ -1,8 +1,10 @@
 from flask import Flask, jsonify, request
 from tasks import tasks
 from function_utils import FunctionUtils
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 TASK_NOT_FOUND_MSG = 'Task not found'
 
 
